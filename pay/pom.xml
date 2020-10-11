@@ -6,7 +6,6 @@
 		<groupId>com</groupId>
 		<artifactId>music</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.muisc</groupId>
 	<artifactId>pay</artifactId>
