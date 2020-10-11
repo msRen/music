@@ -13,10 +13,39 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>music</name>
 	<description>Demo project for Spring Boot</description>
+    <packaging>pom</packaging>
 
-	<properties>
+    <properties>
 		<java.version>1.8</java.version>
 	</properties>
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <profiles.active>dev</profiles.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>stg</id>
+            <properties>
+                <profiles.active>stg</profiles.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>pro</id>
+            <properties>
+                <profiles.active>pro</profiles.active>
+            </properties>
+        </profile>
+    </profiles>
+
+    <modules>
+        <module>common</module>
+    </modules>
 
 	<dependencies>
 		<dependency>
